@@ -112,7 +112,7 @@ pub async fn delete_quote(
 ) -> http::StatusCode {
     let res = sqlx::query(
         r#"
-            DELTE FROM quotes
+            DELETE FROM quotes
             WHERE id = $1
         "#,
     )
